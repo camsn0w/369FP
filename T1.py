@@ -1,5 +1,5 @@
 import math
-
+import numpy as np
 
 def relPrime(num):
     if num <= 2:
@@ -9,30 +9,27 @@ def relPrime(num):
             return [1]
         return []
     result = []
-    for x in range(1,num):
-        if math.gcd(num,x) == 1:
+    for x in range(1, num):
+        if math.gcd(num, x) == 1:
             result.append(x)
     return result
 
+
 def printRelPrimeTable(inpt):
     for x in inpt:
-        print(x,"Sum:",inpt[x][1])
+        print(x, "Sum:", inpt[x][1])
 
 def relPrimeTable(inpt):
     sumDict = {}
     for x in inpt:
-        sumDict.setdefault(x,[relPrime(x), sum(relPrime(x))])
+        sumDict.setdefault(x, [relPrime(x), sum(relPrime(x))])
     printRelPrimeTable(sumDict)
 
 
-
-
-
-
 def main():
-    listoNums = [i for i in range(2,16,1)]
-    #numNums = (int(input("How many numbers? ")))
+    listoNums = [i for i in range(2, 16, 1)]
     print(relPrimeTable(listoNums))
+    #relPrime(listoNums)
 
 
 if __name__ == '__main__':
