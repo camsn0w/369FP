@@ -17,9 +17,10 @@ def relPrime(num):
 
 
 def printRelPrimeTable(inpt):
+    inpt = relPrimeTable(inpt)
     for x in inpt:
-        print(x, "Coprimes:", inpt[x][0])
-        print("Sum:", inpt[x][1])
+        print("n = ",x, ", Coprimes < n: ", inpt[x][0],sep="")
+        print("S\u2099=", inpt[x][1])
 
 
 def relPrimeTable(inpt):
@@ -45,12 +46,22 @@ def genPnMatrix(num):
     print(np.matrix(newlist))
     return newlist
 
+def bDetWork(num):
+    inpt = genPnMatrix(num)
+    det1 = np.linalg.det(inpt)
+    det2 = np.linalg.det(inpt) % num
+    print("n=",num,sep="")
+    print("Det P\u2099", " = ",round(det1),sep="")
+    print("Det P\u2099"," % ",num," = ", round(det2),sep="")
+
+    print("Row",len(inpt),"+ previous rows =",[sum(row[i] for row in inpt) for i in range(len(inpt[0]))])
+
+
 
 def main():
     listoNums = [i for i in range(2, 30, 1)]
-    genPnMatrix(9)
-    # print(relPrimeTable(listoNums))
-    # c1(relPrimeTable(listoNums))
+    #printRelPrimeTable(listoNums)
+    bDetWork(9)
 
 
 if __name__ == '__main__':
