@@ -55,13 +55,16 @@ def bDetWork(num):
     print("Det P\u2099"," % ",num," = ", round(det2),sep="")
 
     print("Row",len(inpt),"+ previous rows =",[sum(row[i] for row in inpt) for i in range(len(inpt[0]))])
+    print("Sum row:",len(inpt),sum(inpt[0]) * len(inpt[0]))
 
 
 
 def main():
     listoNums = [i for i in range(2, 30, 1)]
     #printRelPrimeTable(listoNums)
-    bDetWork(9)
+    for x in range(2,129,2):
+        bDetWork(x)
+    #bDetWork(13)
 
 
 if __name__ == '__main__':
