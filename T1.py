@@ -19,8 +19,14 @@ def relPrime(num):
 def printRelPrimeTable(inpt):
     inpt = relPrimeTable(inpt)
     for x in inpt:
-        print("n = ",x, ", Coprimes < n: ", inpt[x][0],sep="")
+        print("n =",x, " S\u2099=",end="{"), print(*inpt[x][0],sep=", ",end="}\n"),#print("{",','.join(str(inpt[x][0])),"}")
         print("S\u2099=", inpt[x][1])
+        print("{{x\u2081,x\u2082} ⊂ S\u2099| x\u2081+x\u2082 = n, 2|S\u2099(2,x\u2081)| = |S\u2099|, 2|S\u2099(x\u2082,n)| = |S\u2099| }")
+        x1 = inpt[x][0][int(len(inpt[x][0]) / 2)-1]
+        x2 = inpt[x][0][int(len(inpt[x][0])/2)]
+        #x2 = inpt[x][0][int(len(inpt[x][0])/2+1)]
+        #x2 = 1
+        print("{{x\u2081,x\u2082}} = {{{}, {}}}".format(x1,x2))
 
 
 def relPrimeTable(inpt):
@@ -51,19 +57,20 @@ def bDetWork(num):
     det1 = np.linalg.det(inpt)
     det2 = np.linalg.det(inpt) % num
     print("n=",num,sep="")
-    print("Det P\u2099", " = ",round(det1),sep="")
-    print("Det P\u2099"," % ",num," = ", round(det2),sep="")
+    print("S\u2099", " = ",inpt,sep="")
+    #print("Det P\u2099"," % ",num," = ", round(det2),sep="")
 
-    print("Row",len(inpt),"+ previous rows =",[sum(row[i] for row in inpt) for i in range(len(inpt[0]))])
-    print("Sum row:",len(inpt),sum(inpt[0]) * len(inpt[0]))
+    #print("Row",len(inpt),"+ previous rows =",[sum(row[i] for row in inpt) for i in range(len(inpt[0]))])
+    #print("Sum row:",len(inpt),sum(inpt[0]) * len(inpt[0]))
 
 
 
 def main():
-    listoNums = [i for i in range(2, 30, 1)]
-    #printRelPrimeTable(listoNums)
-    for x in range(2,129,2):
-        bDetWork(x)
+    listoNums = [i for i in range(2, 26, 1)]
+    printRelPrimeTable(listoNums)
+    #x = relPrimeTable(listoNums)
+    #print(x)
+
     #bDetWork(13)
 
 
