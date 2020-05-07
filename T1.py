@@ -19,8 +19,11 @@ def relPrime(num):
 def printRelPrimeTable(inpt):
     inpt = relPrimeTable(inpt)
     for x in inpt:
-        print("n =", x, " S\u2099=", end="{"), print(*inpt[x][0], sep=", ",end="}\n"),
+        print("n =", x, " S\u2099=", end="{"), print(*inpt[x][0], sep=", ", end="}\n"),
         print("S\u2099=", inpt[x][1])
+        print('Matrix: \n', np.matrix(genPnMatrix(x)))
+        print("Determinant: ", round(np.linalg.det(genPnMatrix(x))))
+        print("Determinant % {}: ".format(x), round(np.linalg.det(genPnMatrix(x))%4))
         print("{{x\u2081,x\u2082} ⊂ S\u2099| x\u2081+x\u2082 = n, |S\u2099(1,x\u2081)| = |S\u2099(x\u2082,n-1)|}")
         for i in range(int(len(inpt[x][0]) / 2)):
             x1 = inpt[x][0][int(i)]
@@ -48,7 +51,6 @@ def c1(inpt):
 def genPnMatrix(num):
     inpt = relPrime(num)
     newlist = [inpt[x:] + inpt[:x] for x in range(0, len(inpt))]
-    print(np.matrix(newlist))
     return newlist
 
 
