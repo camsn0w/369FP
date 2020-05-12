@@ -1,0 +1,96 @@
+PS C:\Users\leica>  ${env:DEBUGPY_LAUNCHER_PORT}='58465'; & 'C:\Users\leica\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\python.exe' 'c:\Users\leica\.vscode\extensions\ms-python.python-2020.4.76186\pythonFiles\lib\python\debugpy\wheels\debugpy\launcher' 'c:\Users\leica\OneDrive\School\CSU\Spring 2020\Linear Algebra\Final Project\CSU T2b.py' 
+
+Prime factors of  2  are: 
+2
+
+Prime factors of  3  are: 
+3
+
+Prime factors of  4  are:
+2
+2
+
+Prime factors of  5  are:
+5
+
+Prime factors of  6  are:
+2
+3
+
+Prime factors of  7  are:
+7
+
+Prime factors of  8  are:
+2
+2
+2
+
+Prime factors of  9  are:
+3
+3
+
+Prime factors of  10  are:
+2
+5
+
+Prime factors of  11  are:
+11
+
+Prime factors of  12  are:
+2
+2
+3
+
+Prime factors of  13  are:
+13
+
+Prime factors of  14  are:
+2
+7
+
+Prime factors of  15  are:
+3
+5
+
+Prime factors of  16  are:
+2
+2
+2
+2
+
+Prime factors of  17  are:
+17
+
+Prime factors of  18  are:
+2
+3
+3
+
+Prime factors of  19  are:
+19
+
+Prime factors of  20  are:
+2
+2
+5
+
+Prime factors of  21  are:
+3
+7
+
+Prime factors of  22  are:
+2
+11
+
+Prime factors of  23  are:
+23
+
+Prime factors of  24  are:
+2
+2
+2
+3
+
+Prime factors of  25  are:
+5
+5
